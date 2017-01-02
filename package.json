@@ -1,0 +1,31 @@
+{
+  "name": "opsbot",
+  "version": "0.1.0",
+  "description": "a neato bot that bothers over 45 people",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/geoffbrown880/opsbot.git"
+  },
+  "dependencies": {
+    "cool-ascii-faces": "^1.3.4",
+    "director": "^1.2.8",
+    "ejs": "^2.4.1",
+    "express": "^4.13.3"
+  },
+  "keywords": [
+    "node",
+    "heroku",
+    "groupme",
+    "garbage"
+  ],
+  "author": "Geoff Brown",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/geoffbrown880/opsbot/issues"
+  },
+  "homepage": "https://github.com/geoffbrown880/opsbot#readme"
+}
