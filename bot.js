@@ -5,8 +5,6 @@ var botID = process.env.BOT_ID;
 var DEBUG = false;
 
 
-
-
 // could potentially be quite annoying.
 var important_people = {
     "13523133": {
