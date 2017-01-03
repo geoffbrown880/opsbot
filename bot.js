@@ -44,7 +44,7 @@ function respond(){
     this.res.writeHead(200);
 
     if(request.text && !DEBUG){
-        if(cmd_reg.text(request.text)){
+        if(cmd_reg.test(request.text)){
             body_text = processCmd(request);
             console.log("someone did a command!");
         }
