@@ -112,6 +112,9 @@ function sendRecvReq(body_text){
         }
     });
 
+    if(DEBUG)
+        console.log(botReq);
+
     botReq.on('error', function(err){
         console.log("error: " + JSON.stringify(err));
     });
