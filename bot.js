@@ -102,7 +102,7 @@ function sendRecvReq(body_text){
         "text":   body_text
     }
 
-    var botReq = HTTPS.requests(options, function(res){
+    var botReq = HTTPS.request(options, function(res){
         if(res.statusCode == 202) {} // all is well
         else{
             console.log("Ignoring a bad status code: "+ res.statusCode);
