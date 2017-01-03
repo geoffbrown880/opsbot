@@ -2,7 +2,7 @@ var HTTPS = require("https");
 var cmd   = require("./commands.js");
 
 var botID = process.env.BOT_ID;
-var DEBUG = true;
+var DEBUG = false;
 
 var options = {
     hostname: "api.groupme.com",
