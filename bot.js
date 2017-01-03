@@ -2,6 +2,7 @@ var HTTPS = require("https");
 var cmd   = require("./commands.js");
 
 var botID = process.env.BOT_ID;
+var DEBUG = true;
 
 var options = {
     hostname: "api.groupme.com",
@@ -42,7 +43,7 @@ function respond(){
 
     this.res.writeHead(200);
 
-    if(request.text){
+    if(request.text && !DEBUG){
         if(cmd_reg.text(request.text)){
             body_text = processCmd(request);
             console.log("someone did a command!");
@@ -52,6 +53,10 @@ function respond(){
             if(censor(request.text))
                 console.log("someone used a bad word.");
         }
+    }
+
+    if(DEBUG){
+        console.log(JSON.stringify(request));
     }
 
     this.res.end();
