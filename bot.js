@@ -38,7 +38,7 @@ var important_people = {
 
 function respond(){
     var request = JSON.parse(this.req.chunks[0]);
-    var cmd_reg = /^[\/\!]$/;
+    var cmd_reg = /^[\/\!].*/;
     var body_text;
 
     this.res.writeHead(200);
@@ -93,7 +93,7 @@ function censor(text){
 }
 
 function processCmd(request){
-
+    sendRecvReq("Not a valid command: " + request.text);
 }
 
 function sendRecvReq(body_text){
