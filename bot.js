@@ -48,13 +48,13 @@ function censor(text){
         "officers": "Team members. It's pretty clear.",
         "0fficer" : "Now listen here, you little shit...",
         "corps"   : "Volunteer Management Team, or VMT for short.",
-        "211"     : "\"All-American\" Pregame Spectacular. What, did you " +
+        "session" : "\"All-American\" Pregame Spectacular. What, did you " +
                     "think I'd have some long, snarky comment about it?",
         "head"    : "Team leader, you ass.",
         "ranks"   : "But ranks aren't real!",
         "geoff"   : "That's \"El Presidenté\", to you.",
         "brady"   : "Please refer the El Presidenté Vicio properly.",
-        "chief"   : "Executive Team Leader. Or \"Band Demigod.\"",
+        "staff"   : "Executive Team Leader. Or \"Band Demigod.\"",
         "r&r"     : "Student Life Team. What do they do? Who knows?"
     };
 
@@ -69,11 +69,13 @@ function censor(text){
         if(sep[word] in naughty_words){
             if(sep[word] == "head" && !(sep[word-1] && sep[word-1] == "office"))
                 continue;
-            else if(sep[word] == "chief" && !(sep[word+2] && sep[word+2] == "staff"))
+            else if(sep[word] == "staff" && !(sep[word-2] && sep[word-2] == "chief"))
                 continue;
-            else if(sep[word] == "211" && !(sep[word+1] && sep[word+1] == "session"))
+            else if(sep[word] == "session" && !(sep[word-1] && sep[word-1] == "211"))
                 continue;
             else if(sep[word] == "office" && !(sep[word-1] && sep[word-1] == "ops"))
+                continue;
+            else if(sep[word] == "corps" && !(sep[word-1] && sep[word-1] == "officer"))
                 continue;
 
             // we've found one!
