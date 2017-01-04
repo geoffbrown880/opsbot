@@ -68,13 +68,13 @@ function censor(text){
     // check for offenses
     for(word in sep){
         if(sep[word] in naughty_words){
-            if(!(sep[word] == "head" && sep[word-1] && sep[word-1] == "office"))
+            if(sep[word] == "head" && !(sep[word-1] && sep[word-1] == "office"))
                 continue;
-            else if(!(sep[word] == "chief" && sep[word+2] && sep[word+2] == "staff"))
+            else if(sep[word] == "chief" && !(sep[word+2] && sep[word+2] == "staff"))
                 continue;
-            else if(!(sep[word] == "211" && sep[word+1] && sep[word+1] == "session"))
+            else if(sep[word] == "211" && !(sep[word+1] && sep[word+1] == "session"))
                 continue;
-            else if(!(sep[word] == "office" && sep[word-1] && sep[word-1] == "ops"))
+            else if(sep[word] == "office" && !(sep[word-1] && sep[word-1] == "ops"))
                 continue;
 
             // we've found one!
