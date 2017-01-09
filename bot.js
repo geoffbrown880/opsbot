@@ -18,27 +18,27 @@ var important_people = {
     },
     "16729780": {
         "real_name": "Brady Buckles",
-        "response:"  "The Vice President declared."
+        "response":  "The Vice President declared."
     },
     "20851463": {
         "real_name": "Paul Thieme",
-        "response:"  "Quoth the Lord of Sauce."
+        "response":  "Quoth the Lord of Sauce."
     },
     "8653173": {
         "real_name": "Zach Vander Missen",
-        "response:"  "Thundered the Band Demigod."
+        "response":  "Thundered the Band Demigod."
     },
     "8705029": {
         "real_name": "Maddy Coulter",
-        "response:"  "Chided Mom."
+        "response":  "Chided Mom."
     },
     "20667846": {
         "real_Name": "Hannah Zentner",
-        "response:"  "Squeaked the OPs Gnome."
+        "response":  "Squeaked the OPs Gnome."
     },
     "30014495": {
         "real_name": "Dustin Messman",
-        "response:"  "Eat " + (Math.floor(Math.random() * (10 - 2 + 1)) + 10) + " dicks, Dustin."
+        "response":  "Eat " + (Math.floor(Math.random() * (10 - 2 + 1)) + 10) + " dicks, Dustin."
     }
 };
 
