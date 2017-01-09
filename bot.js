@@ -14,7 +14,7 @@ function getRandomIntInclusive(min, max) {
 var important_people = {
     "13523133": {
         "real_name": "Geoff Brown",
-        "response":  "Spake el Presidenté."
+        "response":  "Spoke el Presidenté."
     },
     "16729780": {
         "real_name": "Brady Buckles",
@@ -78,7 +78,7 @@ function censor(text){
 
     // for censoring
     var naughty_words = {
-        "office"  : "OPerations Void™",
+        "office"  : "OPerations Void™",
         "officer" : "Team member :)",
         "officers": "Team members. It's pretty clear.",
         "0fficer" : "Now listen here, you little shit...",
