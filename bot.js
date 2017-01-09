@@ -4,11 +4,41 @@ var cmd   = require("./commands.js");
 var botID = process.env.BOT_ID;
 var DEBUG = false;
 
+function getRandomIntInclusive(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
 // could potentially be quite annoying.
 var important_people = {
     "13523133": {
-        "Real Name": "Geoff Brown",
-        "Response":  "Spake el Presidenté."
+        "real_name": "Geoff Brown",
+        "response":  "Spake el Presidenté."
+    },
+    "16729780": {
+        "real_name": "Brady Buckles",
+        "response:"  "The Vice President declared."
+    },
+    "20851463": {
+        "real_name": "Paul Thieme",
+        "response:"  "Quoth the Lord of Sauce."
+    },
+    "8653173": {
+        "real_name": "Zach Vander Missen",
+        "response:"  "Thundered the Band Demigod."
+    },
+    "8705029": {
+        "real_name": "Maddy Coulter",
+        "response:"  "Chided Mom."
+    },
+    "20667846": {
+        "real_Name": "Hannah Zentner",
+        "response:"  "Squeaked the OPs Gnome."
+    },
+    "30014495": {
+        "real_name": "Dustin Messman",
+        "response:"  "Eat " + (Math.floor(Math.random() * (10 - 2 + 1)) + 10) + " dicks, Dustin."
     }
 };
 
@@ -25,8 +55,13 @@ function respond(){
             body_text = processCmd(request);
             console.log("someone did a command!");
         }
+        
+        else if(request.user_id in important_people){
+            console.log("quoting someone...");
+            sendRecvRequest(important_people[request.user_id].response);
+        }
 
-        else {//if(!(request.user_id in important_people)){
+        if(!(request.user_id in important_people)){
             if(censor(request.text))
                 console.log("someone used a bad word.");
         }
@@ -43,7 +78,7 @@ function censor(text){
 
     // for censoring
     var naughty_words = {
-        "office"  : "OPerations Void",
+        "office"  : "OPerations Void™",
         "officer" : "Team member :)",
         "officers": "Team members. It's pretty clear.",
         "0fficer" : "Now listen here, you little shit...",
