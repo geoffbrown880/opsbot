@@ -58,7 +58,7 @@ function respond(){
         
         else if(request.user_id in important_people){
             console.log("quoting someone...");
-            sendRecvRequest(important_people[request.user_id].response);
+            sendRecvReq(important_people[request.user_id].response);
         }
 
         if(!(request.user_id in important_people)){
