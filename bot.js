@@ -56,10 +56,10 @@ function respond(){
             console.log("someone did a command!");
         }
         
-        else if(request.user_id in important_people){
+        /*else if(request.user_id in important_people){
             console.log("quoting someone...");
             sendRecvReq(important_people[request.user_id].response);
-        }
+        }*/
 
         if(!(request.user_id in important_people)){
             if(censor(request.text))
