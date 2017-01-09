@@ -61,7 +61,7 @@ function respond(){
             sendRecvReq(important_people[request.user_id].response);
         }*/
 
-        if(!(request.user_id in important_people)){
+        else{ //if(!(request.user_id in important_people)){
             if(censor(request.text))
                 console.log("someone used a bad word.");
         }
