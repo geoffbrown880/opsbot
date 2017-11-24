@@ -24,21 +24,9 @@ var important_people = {
         "real_name": "Paul Thieme",
         "response":  "Quoth the Lord of Sauce."
     },
-    "8653173": {
-        "real_name": "Zach Vander Missen",
-        "response":  "Thundered the Band Demigod."
-    },
-    "8705029": {
-        "real_name": "Maddy Coulter",
-        "response":  "Chided Mom."
-    },
-    "20667846": {
-        "real_Name": "Hannah Zentner",
-        "response":  "Squeaked the OPs Gnome."
-    },
-    "30014495": {
-        "real_name": "Dustin Messman",
-        "response":  "Eat " + (Math.floor(Math.random() * (10 - 2 + 1)) + 10) + " dicks, Dustin."
+    "20771949": {
+        "real_name": "Drew Ryan",
+        "response":  "The \"wisdom\" of the \"Libertarian\""
     }
 };
 
@@ -56,12 +44,12 @@ function respond(){
             console.log("someone did a command!");
         }
         
-        /*else if(request.user_id in important_people){
+        else if(request.user_id in important_people){
             console.log("quoting someone...");
             sendRecvReq(important_people[request.user_id].response);
-        }*/
+        }
 
-        else{ //if(!(request.user_id in important_people)){
+        else{
             if(censor(request.text))
                 console.log("someone used a bad word.");
         }
